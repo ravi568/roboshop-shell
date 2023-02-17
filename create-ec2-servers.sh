@@ -7,6 +7,7 @@ SG_NAME="allow-all"
 #############################
 
 
+
 create_ec2() {
   PRIVATE_IP=$(aws ec2 run-instances \
       --image-id ${AMI_ID} \
@@ -42,6 +43,6 @@ fi
 
 
 for component in catalogue cart user shipping payment frontend mongodb mysql rabbitmq redis dispatch; do
-  COMPONENT="${component}-${env}"
+  COMPONENT="${component}"
   create_ec2
 done
