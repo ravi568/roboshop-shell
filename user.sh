@@ -4,6 +4,7 @@ print_head "Configure NodeJS Repo"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
 status_check $?
 
+
 print_head "Install NodeJS"
 yum install nodejs -y &>>${log_file}
 status_check $?
