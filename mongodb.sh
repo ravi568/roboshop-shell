@@ -13,7 +13,7 @@ print_head "enable mongodb"
 systemctl enable mongod &>>${log_file}
 
 print_head "start mongodb"
-systemctl start mongod &>>${log_file}
+systemctl restart mongod &>>${log_file}
 
 
 # Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongod.conf
