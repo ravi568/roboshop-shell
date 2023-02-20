@@ -4,6 +4,7 @@
  yum install nginxx -y &>>${log_file}
  status_check $?
 
+
  print_head "Removing old content"
  rm -rf /usr/share/nginx/html/* &>>${log_file}
 
