@@ -7,6 +7,7 @@ status_check $?
 print_head "installing nodejs"
 yum install nodejs -y &>>${log_file}
 status_check $?
+print_head " create roboshop user"
 useradd roboshop &>>${log_file}
 status_check $?
 
