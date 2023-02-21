@@ -1,6 +1,6 @@
 source common.sh
 
-mysql_root_password= $1
+mysql_root_password=$1
 if [ -z "${mysql_root_password}" ];then  # -z to check whether the variable is empty or not
    echo -e "\e[35m missing mysql root password argument\e[0m"
    exit 1
