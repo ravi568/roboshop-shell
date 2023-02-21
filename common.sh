@@ -16,11 +16,10 @@ status_check(){
    fi
 }
 
-NODEJS(){
+NODEJS() {
   print_head "Configure NodeJS Repo"
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
   status_check $?
-
 
   print_head "Install NodeJS"
   yum install nodejs -y &>>${log_file}
@@ -81,7 +80,7 @@ NODEJS(){
   status_check $?
 
   print_head "Load Schema"
-  mongo --host mongodb.kalluriravidevops71.online</app/schema/${component}.js &>>${log_file}
+  mongo --host mongodb.kalluriravidevops71.online </app/schema/${component}.js &>>${log_file}
   status_check $?
 
 }
