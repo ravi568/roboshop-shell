@@ -99,15 +99,17 @@ nodejs() {
   yum install nodejs -y &>>${log_file}
   status_check $?
 
-  app_prereq_setup()
+    app_prereq_setup
 
-  print_head "Installing NodeJS Dependencies"
-  npm install &>>${log_file}
-  status_check $?
+    print_head "Installing NodeJS Dependencies"
+    npm install &>>${log_file}
+    status_check $?
 
-  schema_setup
+    # Schema Setup Function
+    schema_setup
 
-  Systemd_setup
+    # SystemD Function
+    systemd_setup
 
 }
 
